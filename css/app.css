@@ -1,0 +1,68 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{background:var(--fon);background-image:var(--fon-uzor);color:var(--na-fone);font:400 var(--tekst)/1.45 var(--shrift);-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+
+.ekran{max-width:480px;margin:0 auto;min-height:100dvh}
+.stranica{min-height:100dvh;display:flex;flex-direction:column;padding:var(--o4) var(--o4) calc(var(--o4) + env(safe-area-inset-bottom))}
+@media (min-width:768px){.ekran{padding-right:96px;max-width:576px}}
+
+.shapka{display:flex;align-items:center;justify-content:space-between;gap:var(--o2);min-height:var(--palec)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+.znak{width:36px;height:36px;flex:none;background:var(--znak-fon);border-radius:var(--znak-skr);border:var(--znak-kontur)}
+.tema-knopka,.nazad{min-height:var(--palec);min-width:var(--palec);padding:0 var(--o2);display:flex;align-items:center;justify-content:center;gap:var(--o1);background:transparent;border:var(--kontur-tol) solid var(--kontur);border-radius:var(--skr-mal);font-size:15px;font-weight:600}
+[data-theme="biryuza"] .tema-knopka,[data-theme="biryuza"] .nazad{background:#fff;color:var(--na-poverh);box-shadow:3px 3px 0 var(--kontur)}
+.tema-tochka{width:16px;height:16px;border-radius:50%;background:var(--deystvie)}
+.nazad{font-size:26px;line-height:1;padding:0}
+
+.ayat{font-family:"Madina",serif;font-size:30px;line-height:1.7;color:var(--deystvie);text-align:right;margin-top:var(--o4)}
+[data-theme="biryuza"] .ayat{color:#FFD23F}
+h1{font-size:var(--zagolovok);font-weight:800;line-height:1.12;margin-top:var(--o1)}
+.pod{margin-top:var(--o3);font-size:var(--tekst)}
+.tiho{color:var(--tiho);font-size:var(--melko);text-align:center;margin-top:var(--o2)}
+
+.temy{list-style:none;display:flex;flex-wrap:wrap;gap:var(--o1);margin-top:var(--o4)}
+.temy li{padding:var(--o1) var(--o2);border:var(--kontur-tol) solid var(--kontur);border-radius:var(--skr-mal);font-size:15px}
+[data-theme="biryuza"] .temy li{background:#fff;color:var(--na-poverh);font-weight:600;box-shadow:3px 3px 0 var(--kontur)}
+[data-theme="biryuza"] .temy li:nth-child(2){background:#FFD23F}
+[data-theme="biryuza"] .temy li:nth-child(3){background:#FF8A5B}
+
+.niz{margin-top:auto;padding-top:var(--o4);display:flex;flex-direction:column;gap:var(--o2)}
+.glavnaya-knopka,.vtoraya-knopka{min-height:var(--knopka);width:100%;border-radius:var(--skr-bol);font-weight:800;font-size:18px;transition:transform var(--bystro),box-shadow var(--bystro)}
+.glavnaya-knopka{background:var(--deystvie);color:var(--na-deystvii);border:0;box-shadow:var(--ten-knopki)}
+[data-theme="biryuza"] .glavnaya-knopka{border:3px solid var(--kontur)}
+.vtoraya-knopka{background:transparent;border:var(--kontur-tol) solid var(--kontur)}
+[data-theme="biryuza"] .vtoraya-knopka{background:#fff;color:var(--na-poverh)}
+.glavnaya-knopka:active{transform:translate(3px,3px);box-shadow:none}
+
+.schet{font-weight:600}
+.polosa{height:8px;border-radius:4px;background:var(--kontur);margin-top:var(--o3);overflow:hidden}
+.polosa span{display:block;height:100%;width:0;background:var(--deystvie);transition:width var(--srednee)}
+
+.kartochka{margin-top:var(--o4);background:var(--poverh);color:var(--na-poverh);border-radius:var(--skr-bol);padding:var(--o4) var(--o3);box-shadow:var(--ten);transform:rotate(var(--povorot))}
+[data-theme="biryuza"] .kartochka{border:3px solid var(--kontur)}
+.kartochka.vhod{animation:vhod var(--srednee) ease-out}
+@keyframes vhod{from{opacity:0;transform:translateX(24px) rotate(var(--povorot))}to{opacity:1;transform:translateX(0) rotate(var(--povorot))}}
+.tema-voprosa{font-size:var(--melko);font-weight:600;color:var(--deystvie)}
+[data-theme="biryuza"] .tema-voprosa{color:#0A7C86}
+.kartochka h2{font-size:19px;line-height:1.35;margin-top:6px}
+.otvety{display:flex;flex-direction:column;gap:var(--o1);margin-top:var(--o3)}
+.otvet{min-height:var(--palec);padding:10px var(--o3);text-align:left;border-radius:var(--skr-mal);background:transparent;border:var(--kontur-tol) solid var(--kontur);font-size:16px;display:flex;align-items:center;justify-content:space-between;gap:var(--o1)}
+[data-theme="izumrud"] .otvet{background:var(--fon)}
+.otvet:disabled{cursor:default}
+.otvet.verno{border-color:var(--verno);background:var(--verno);color:#fff}
+.otvet.neverno{border-color:var(--neverno);background:var(--neverno);color:#fff}
+.otvet .metka{font-weight:800;font-size:14px}
+.razbor{margin-top:var(--o3);font-size:16px}
+.istochnik{margin-top:var(--o1);font-size:var(--melko);font-weight:600;opacity:.8}
+
+.bolshoe{font-size:56px;font-weight:800;line-height:1;margin-top:var(--o5)}
+.dostup{margin-top:var(--o4);background:var(--poverh);color:var(--na-poverh);border-radius:var(--skr-bol);padding:var(--o4) var(--o3);box-shadow:var(--ten)}
+[data-theme="biryuza"] .dostup{border:3px solid var(--kontur)}
+.dostup h2{font-size:22px}
+.dostup p{margin-top:var(--o1)}
+.cena{font-size:32px;font-weight:800}
+.num{font-variant-numeric:tabular-nums}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

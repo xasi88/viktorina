@@ -1,0 +1,11 @@
+{
+  "id": "/viktorina/",
+  "name": "Исламская викторина",
+  "short_name": "Викторина",
+  "lang": "ru",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0C3B2E",
+  "theme_color": "#0C3B2E",
+  "icons": [{ "src": "img/znak.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

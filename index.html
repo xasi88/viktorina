@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru" data-theme="izumrud">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Исламская викторина</title>
+<meta name="description" content="Викторина об исламе: 10 вопросов бесплатно, у каждого ответа источник.">
+<link rel="icon" href="img/znak.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0C3B2E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;800&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css?v=bc97f23f">
+<link rel="stylesheet" href="css/app.css?v=bc97f23f">
+<script>try{var t=localStorage.getItem("tema");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<main id="app" class="ekran">
+
+  <section id="glavnaya" class="stranica">
+    <header class="shapka">
+      <span class="logo"><span class="znak" aria-hidden="true"></span>Исламская викторина</span>
+      <button class="tema-knopka" id="tema" type="button" aria-label="Сменить тему">
+        <span class="tema-tochka" aria-hidden="true"></span>Тема
+      </button>
+    </header>
+    <p class="ayat" lang="ar" dir="rtl">وَقُل رَّبِّ زِدۡنِي عِلۡمٗا</p>
+    <h1>Проверьте свои знания об исламе за 5 минут</h1>
+    <p class="pod">10 вопросов бесплатно. У каждого ответа источник: Коран или хадис.</p>
+    <ul class="temy" id="temy"></ul>
+    <div class="niz">
+      <button class="glavnaya-knopka" id="start" type="button">Начать бесплатно</button>
+      <p class="tiho">Без входа и без оплаты</p>
+    </div>
+  </section>
+
+  <section id="vopros" class="stranica" hidden>
+    <header class="shapka">
+      <button class="nazad" id="domoy" type="button" aria-label="На главную">‹</button>
+      <span class="schet" id="schet">Вопрос 1 из 10</span>
+    </header>
+    <div class="polosa" aria-hidden="true"><span id="polosa"></span></div>
+    <article class="kartochka" id="kartochka">
+      <p class="tema-voprosa" id="tema-voprosa"></p>
+      <h2 id="tekst-voprosa"></h2>
+      <div class="otvety" id="otvety"></div>
+      <div class="razbor" id="razbor" hidden>
+        <p id="poyasnenie"></p>
+        <p class="istochnik" id="istochnik"></p>
+      </div>
+    </article>
+    <div class="niz">
+      <button class="glavnaya-knopka" id="dalee" type="button" hidden>Дальше</button>
+    </div>
+  </section>
+
+  <section id="itog" class="stranica" hidden>
+    <header class="shapka"><span class="logo"><span class="znak" aria-hidden="true"></span>Итог</span></header>
+    <p class="bolshoe" id="itog-chislo"></p>
+    <p class="pod" id="itog-tekst"></p>
+    <div class="dostup">
+      <h2>Полный доступ</h2>
+      <p>Все темы и новые вопросы каждый месяц. Оплата один раз, доступ навсегда.</p>
+      <p class="cena num">299 ₽</p>
+    </div>
+    <div class="niz">
+      <button class="glavnaya-knopka" id="kupit" type="button">Открыть полный доступ</button>
+      <button class="vtoraya-knopka" id="snova" type="button">Пройти ещё раз</button>
+      <p class="tiho" id="kupit-tekst" hidden>Оплата появится скоро.</p>
+    </div>
+  </section>
+
+</main>
+<script src="js/version.js?v=bc97f23f"></script>
+<script src="js/app.js?v=bc97f23f"></script>
+</body>
+</html>

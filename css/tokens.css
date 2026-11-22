@@ -1,0 +1,38 @@
+/* Все цвета, шрифты и размеры. Источник: docs/Брендбук Исламская викторина.md */
+@font-face{font-family:"Madina";src:url("../fonts/hafs.woff2") format("woff2");font-display:swap}
+
+:root{
+  --shag:4px;
+  --o1:8px;--o2:12px;--o3:16px;--o4:24px;--o5:32px;
+  --knopka:56px;--palec:44px;
+  --tekst:17px;--zagolovok:33px;--melko:14px;
+  --bystro:180ms;--srednee:250ms;
+}
+
+[data-theme="izumrud"]{
+  --shrift:"Onest",system-ui,sans-serif;
+  --fon:#0C3B2E;--fon-uzor:none;
+  --poverh:#124A3A;
+  --na-fone:#F4F1E8;--na-poverh:#F4F1E8;--tiho:#9FC2B3;
+  --kontur:#2F6B55;--kontur-tol:1.5px;
+  --deystvie:#F2B33D;--na-deystvii:#0C3B2E;
+  --vybor-fon:#1D5A44;--vybor-kontur:#F2B33D;
+  --verno:#3FBF7F;--neverno:#E2654D;
+  --skr-mal:12px;--skr-bol:20px;
+  --ten:none;--ten-knopki:none;--povorot:0deg;
+  --znak-fon:#F2B33D;--znak-skr:10px 10px 10px 2px;--znak-kontur:0;
+}
+
+[data-theme="biryuza"]{
+  --shrift:"Rubik",system-ui,sans-serif;
+  --fon:#0A7C86;--fon-uzor:radial-gradient(#FFFFFF22 1.5px,transparent 1.5px) 0 0/18px 18px;
+  --poverh:#FFFFFF;
+  --na-fone:#FFFFFF;--na-poverh:#10222B;--tiho:#D9F3F5;
+  --kontur:#10222B;--kontur-tol:2.5px;
+  --deystvie:#FF8A5B;--na-deystvii:#10222B;
+  --vybor-fon:#FFD23F;--vybor-kontur:#10222B;
+  --verno:#2BB673;--neverno:#E2654D;
+  --skr-mal:8px;--skr-bol:14px;
+  --ten:6px 6px 0 #10222B;--ten-knopki:5px 5px 0 #10222B;--povorot:-1deg;
+  --znak-fon:#FFD23F;--znak-skr:50%;--znak-kontur:3px solid #10222B;
+}

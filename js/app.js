@@ -111,7 +111,8 @@
     var t = document.documentElement.dataset.theme === "izumrud" ? "biryuza" : "izumrud";
     document.documentElement.dataset.theme = t;
     document.querySelector('meta[name="theme-color"]').content = t === "izumrud" ? "#0C3B2E" : "#0A7C86";
-    try { localStorage.setItem("tema", t); } catch (e) {}
+    // Имя с приставкой проекта: хранилище браузера общее у всех сайтов на xasi88.github.io.
+    try { localStorage.setItem("viktorina-tema", t); } catch (e) {}
   });
 
   fetch("data/voprosy.json").then(function (r) { return r.json(); }).then(function (d) {
